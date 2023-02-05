@@ -14,29 +14,27 @@ export default function About() {
             <meta property="og:description" content="BCIT Digital Design and Development Diploma" />
             <link rel="icon" href="/favicon.png" />
         </Head>
-        <main>
+        <main className={styles.aboutMain}>
+            <nav className={styles.navbar}>
+                <img src='/icons/menu-icon.png'/>
+                <img src='/icons/graduation-hat.png'/>
+            </nav>
             <div>
-                <h1></h1>
-                <h1></h1>
-            </div>
-            <div>
+                <h1 className={styles.aboutUsTitles}><span>About Us</span></h1>
                 <p></p>
                 <p></p>
                 <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div>
-                <h2></h2>
-                <h2></h2>
-            </div>
-            <div>
                 <h3></h3>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h1>Department</h1>
             </div>
-            <img src='/icons/leftArrow.png'/>
-            <img src='/icons/rightArrow.png'/>
+            <img className={styles.carouselArrows} src='/icons/leftArrow.png'/>
+            <img className={styles.carouselArrows} src='/icons/rightArrow.png'/>
             <div id='carouselImage' 
                 style={{
                     height: "200px", 
