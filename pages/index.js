@@ -7,7 +7,19 @@ import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const OpenDropdownMenu = () => {
+    var displayMenu = document.getElementById('displayMenu');
+    displayMenu.style.display = "block"; 
+  }
+
+  const CloseDropdownMenu = () => {
+    var displayMenu = document.getElementById('displayMenu');
+    displayMenu.style.display = "none"; 
+  }
+
   return (
+    
     <>
     <Head>
         <title>Home</title>
@@ -15,10 +27,21 @@ export default function Home() {
         <meta property="og:title" content="Assignment #1 - Home Page" />
         <meta property="og:description" content="BCIT Digital Design and Development Diploma" />
         <link rel="icon" href="/favicon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
     </Head>
     <main className={styles.homeMain}>
       <nav className={styles.navbar}>
-        <img src='/icons/menu-icon.png'/>
+        <div>
+          <img onClick={() => OpenDropdownMenu()} src='/icons/menu-icon.png'/>
+          <div id='displayMenu' className={styles.dropdownMenu}>
+            <h1 className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</h1>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="../about">About</a></li>
+              <li><a href="../contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>       
         <img src='/icons/graduation-hat.png'/>
       </nav>
       <h1 className={styles.header}>An investment in knowledge pays the best interest.</h1>

@@ -1,3 +1,5 @@
+/* NavBar */
+
 .navbar {
   width: 100%;
   display: flex;
@@ -7,7 +9,46 @@
 
 .navbar img {
   width: 40px;
+  height: 40px;
   cursor: pointer;
+  position: relative;
+}
+
+.dropdownMenu {
+  padding: 115px; 
+  background: var(--quinary-color);
+  border-radius: 200px;
+  font-size: 20px;
+  position: absolute;
+  top: 43px;
+  left: 130px;
+  display: none;
+}
+
+.dropdownMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  top: 75px;
+  right: 40px;
+}
+
+.dropdownMenu li, .dropdownMenu h1 {
+  cursor: pointer;
+  list-style: none;
+}
+
+.closeDropdownMenu {
+  position: absolute;
+  top: 40px;
+  left: 35px;
+  font-size: 30px;
+}
+
+.dropdownMenu li:hover, .closeDropdownMenu:hover {
+  opacity: 0.5;  
 }
 
 /* Home Page */
@@ -29,7 +70,7 @@
 
 .header::after {
   content: '';
-  background: #f7dcbe;
+  background: var(--secondary-color);
   width: 75%;
   height: 3px;
   position: absolute;
@@ -59,15 +100,15 @@
 
 .buttonContactUs {
   padding: 5px 10px;
-  border: 2px solid white;
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
   background: none;
   cursor: pointer;
 }
 
 .buttonContactUs:hover {
-  background-color: white;
-  color: #143138;
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
 }
 
 .downwardArrow {
@@ -79,25 +120,139 @@
 
 /* About Page */
 .aboutMain {
-  background-color: #143138;
-  height: 100vh;
+  background-color: var(--quaternary-color);
   font-family: arial;
 }
 
+.aboutPageText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.aboutPageTextMargin {
+  margin: 10px 395px;
+}
+
+.aboutPageTextMargin p:first-of-type {
+  margin-top: 50px;
+}
+
 .aboutUsTitles {
-  margin: 40px 190px;
+  margin: 90px 190px;
   text-align: center;
-  border-bottom: 5px solid #f7dcbe;
+  border-bottom: 5px solid var(--secondary-color);
   line-height: 0.1em;
 }
 
 .aboutUsTitles span {
-  background:#143138; 
+  background:var(--quaternary-color); 
   padding:0 100px; 
 }
 
-.carouselArrows {
+.upwardArrow {
+  position: fixed;
+  right: 100px;
+  bottom: 180px;
+}
+
+.downwardArrowAboutPage {
+  position: fixed;
+  right: 100px;
+  bottom: 125px;
+}
+
+.upwardArrow img, .downwardArrowAboutPage img {
   width: 20px;
+  cursor: pointer;
+}
+
+.displayCarouselImages {
+  position: relative;
+}
+
+.carouselImagesDisplay{
+  position: relative;
+  z-index: 0;
+}
+
+.carouselImagesDisplay img {
+  width: 400px;
+  height: 200px;
+}
+
+.carouselImagesTest {
+  position: absolute;
+  width: 175px;
+}
+
+.carouselArrows {
+  position: absolute;
+  top: 130px;
+  left: 38%;
+  display: flex;
+  gap: 260px;
+}
+
+.carouselArrows img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.departmentList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+/* Contact Page */
+.contactMain {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/background-images/backgroundMountainUpsideDown.jpg");
+  background-size: cover;
+  font-family: arial;
+}
+
+.contactUsTitles {
+  margin: 20px auto;
+  color: var(--primary-color);
+  text-align: center;
+  max-width: 1000px;
+  position: relative;
+}
+
+.contactUsTitles::before {
+  content: "";
+  display: block;
+  width: 320px;
+  height: 3px;
+  background: var(--secondary-color);
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.contactUsTitles::after {
+  content: "";
+  display: block;
+  width: 320px;
+  height: 3px;
+  background: var(--secondary-color);
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.letsChatText {
+  margin: 100px 0;
+  text-align: center;
 }
 
 /* Desktop */
