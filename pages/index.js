@@ -34,7 +34,7 @@ export default function Home() {
         <div>
           <img onClick={() => OpenDropdownMenu()} src='/icons/menu-icon.png'/>
           <div id='displayMenu' className={styles.dropdownMenu}>
-            <h1 className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</h1>
+            <span className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</span>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="../about">About</a></li>

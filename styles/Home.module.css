@@ -35,7 +35,7 @@
   right: 40px;
 }
 
-.dropdownMenu li, .dropdownMenu h1 {
+.dropdownMenu li, .dropdownMenu span {
   cursor: pointer;
   list-style: none;
 }
@@ -61,6 +61,7 @@
   background-size: cover;
   font-family: arial;
 }
+
 .header {
   position: absolute;
   left: 300px;
@@ -132,11 +133,11 @@
 }
 
 .aboutPageTextMargin {
-  margin: 10px 395px;
+  margin: 10px 395px 0px 395px;
 }
 
-.aboutPageTextMargin p:first-of-type {
-  margin-top: 50px;
+.firstParagraph {
+  margin: 50px 395px;
 }
 
 .aboutUsTitles {
@@ -255,19 +256,199 @@
   text-align: center;
 }
 
+.userInputInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.userInputInfo fieldset {
+  border: 1px solid var(--quaternary-color);
+  border-radius: 5px;
+}
+
+.userInputInfo table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+
+.userInputInfo input {
+  background-color: var(--primary-color);
+  color: var(--quinary-color);
+  border: none;
+  padding: 2px;
+}
+
+.userFullName, .userEmail {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.userFullName tr, .userEmail tr {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userFullName input {
+  width: 300px;
+}
+
+.userEmail input {
+  width: 605px;
+}
+
 /* Desktop */
 @media (min-width: 1001px){
-  
+
 }
 
 /* Tablet (iPad Air) */
 @media (min-width: 601px) and (max-width: 1000px) {
-  
+    /* Home Page */
+    .header {
+      left: 50px;
+      bottom: 25%;
+      width: 600px;
+    }
+    .header::after {
+      top: 95px;
+    }
+    .paragraph {
+      left: 50px;
+      bottom: 15%;
+      width: 590px;
+    }
+    .moreAboutButton {
+      left: 50px;
+      bottom: 11%;
+    }
+    .contactUsButton {
+      left: 175px;
+      bottom: 11%;
+    }
+    .downwardArrow {
+      bottom: 10%;
+    }
+    /* About Page */
+    .aboutUsTitles{
+      margin: 3% 3%;
+    }
+    .aboutUsTitles span {
+      padding: 0 30px;
+    }
+    .firstParagraph {
+      margin: 3% 28% 0 28%;
+    }
+    .aboutPageTextMargin {
+      margin: 1.5% 28%;
+    }
+    .carouselArrows {
+      left: 28%;
+      gap: 290px;
+    }
+    .departmentList {
+      margin: 25px 0;
+    }
 }
 
-/* Desktop */
-@media (min-width: 600px){
-  
+/* Mobile (Iphone XR) */
+@media (max-width: 600px){
+  /* Home Page */
+  .homeMain {
+    background-position: center;
+  }
+  .navbar {
+    padding: 50px;
+  }
+  .navbar img {
+    width: 35px;
+    height: 30px;
+  }
+  .dropdownMenu {
+    top: 1%;
+    left: 5%;
+  }
+  .header {
+    left: 6%;
+    bottom: 50%;
+    width: 200px;
+    font-size: 16px;
+  }
+  .header::after {
+    top: 65px;
+  }
+  .paragraph {
+    left: 6%;
+    bottom: 34%;
+    width: 240px;
+    font-size: 14px;
+  }
+  .moreAboutButton {
+    position: absolute;
+    left: 6%;
+    bottom: 30%;
+  }
+  .contactUsButton {
+    left: 31%;
+    bottom: 30%;
+  }
+  .buttonContactUs {
+    font-size: 10px;
+  }
+  .downwardArrow {
+    right: 10%;
+    bottom: 5%;
+  }
+  /* About Page */
+  .aboutUsTitles {
+    margin: 10px;
+  }
+  .aboutUsTitles span {
+    padding: 0 20px;
+  }
+  .aboutPageTextMargin {
+    margin: 10px 100px;
+  }
+  .firstParagraph {
+    margin: 50px 100px 0px 100px;
+  }
+  .aboutPageTextMargin h3:first-of-type {
+    font-size: 24px;
+  }
+  .upwardArrow {
+    right: 10%;
+  }
+  .downwardArrowAboutPage {
+    right: 10%;
+  }
+  .carouselArrows {
+    left: 5%;
+    gap: 305px;
+  }
+  .departmentList {
+    margin: 25px 0;
+  }
+
+  /* Contact Page */
+  .contactUsTitles {
+    width: 85%;
+  }
+  .contactUsTitles::after, .contactUsTitles::before {
+    width: 23%;
+  }
+  .letsChatText {
+    margin: 65px 0 15px 0;
+  }
+  .userInputInfo table {
+    padding: 25px;
+  }
+  .userFullName input {
+    width: 125px;
+  }
+  .userEmail input {
+    width: 255px;
+  }
 }
-
-

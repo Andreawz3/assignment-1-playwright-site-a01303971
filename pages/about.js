@@ -37,7 +37,7 @@ export default function About() {
                 <div>
                     <img onClick={() => OpenDropdownMenu()} src='/icons/menu-icon.png'/>
                     <div id='displayMenu' className={styles.dropdownMenu}>
-                        <h1 className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</h1>
+                        <span className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</span>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="../about">About</a></li>
@@ -49,7 +49,7 @@ export default function About() {
             </nav>
             <div className={styles.aboutPageText}>
                 <h1 className={styles.aboutUsTitles}><span>About Us</span></h1>
-                <p className={styles.aboutPageTextMargin}>We are proud to deliver an education that goes betond textbooks and classrooms.</p>
+                <p className={styles.firstParagraph}>We are proud to deliver an education that goes betond textbooks and classrooms.</p>
                 <p className={styles.aboutPageTextMargin}>
                     Our students gain technical skills, real-world experience, and problem-solving ability
                     needed to embrace complexity and lead innovation in a rapidly changing workforce.
@@ -80,38 +80,37 @@ export default function About() {
                     </span>
                 </a>     
                 <div className={styles.displayCarouselImages}>
-                    {information && information.map((info, index) => {
-                        return(
-                            <div id='carouselImage'
-                                className={ styles.carouselImagesDisplay }
-                                style={{
-                                    height: "200px", 
-                                    backgroundRepeat: "no-repeat", 
-                                    backgroundSize: "cover",
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    margin: "40px 0px"
-                                }}>                             
-                                <img className={styles.fade} src={info.img} />
-                                <div id='testOnImageHere' 
-                                    className={styles.carouselImagesTest}
+                        {information && information.map((info, index) => {
+                            return(
+                                <div id='carouselImage'
+                                    className={ styles.carouselImagesDisplay }
                                     style={{
-                                    backgroundColor: "rgba(16, 46, 53, 0.5)",
-                                    padding: "10px",
-                                    margin: "0px 50px"
-                                }}>                       
-                                    <p>{info.value}</p>
+                                        height: "200px", 
+                                        backgroundRepeat: "no-repeat", 
+                                        backgroundSize: "cover",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        margin: "40px 0px"
+                                    }}>                             
+                                    <img className={styles.fade} src={info.img} />
+                                    <div id='testOnImageHere' 
+                                        className={styles.carouselImagesTest}
+                                        style={{
+                                        backgroundColor: "rgba(16, 46, 53, 0.5)",
+                                        padding: "10px",
+                                        margin: "0px 50px"
+                                    }}>                       
+                                        <h5>{info.value}</h5>
+                                    </div>
                                 </div>
-                            </div>
-                        )                       
-                    })}
+                            )
+                        })}                        
                     <div className={styles.carouselArrows}>
                         <img src='/icons/leftArrow.png' />
                         <img src='/icons/rightArrow.png'/>                     
                     </div>                     
                 </div>
- 
                 <h1 className={styles.aboutUsTitles}><span>Department</span></h1>
                 <ul className={styles.departmentList}>
                     <li>Applied & Natural Sciences</li>

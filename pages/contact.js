@@ -33,7 +33,7 @@ export default function About() {
                 <div>
                     <img onClick={() => OpenDropdownMenu()} src='/icons/menu-icon.png'/>
                     <div id='displayMenu' className={styles.dropdownMenu}>
-                        <h1 className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</h1>
+                        <span className={styles.closeDropdownMenu} onClick={() => CloseDropdownMenu()}>x</span>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="../about">About</a></li>
@@ -49,22 +49,33 @@ export default function About() {
             <div className={styles.letsChatText}>
                 <p>Want to discuss? Lets chat!</p>
             </div>
-            <div>
+            <div className={styles.userInputInfo}>
                 <form>
                     <fieldset>
                         <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
+                            <thead className={styles.userFullName}>
+                                <tr>
+                                    <td>First Name:</td>
+                                    <td><input id='firstName' placeholder='First Name Here'></input></td> 
+                                </tr>
+                                <tr>
+                                    <td>Last Name:</td>
+                                    <td><input id='lastName' placeholder='Last Name Here'></input></td>
+                                </tr>
                             </thead>
-                            <thead></thead>
+                            <thead className={styles.userEmail}>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td><input id='email' placeholder='Email Here'></input></td>
+                                </tr>
+                            </thead>
                         </table>
                     </fieldset>
                 </form>
-                <input id='firstName' placeholder='First Name Here'></input>
-                <input id='lastName'></input>
-                <input id='email'></input>
             </div>
+            <a href="/about" className={styles.upwardArrow}>
+                <img src='/icons/upwardArrow.png'/>
+            </a>
         </main>
         </>
     )
